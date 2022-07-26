@@ -1,0 +1,38 @@
+.inputBase{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    margin-bottom: 24px;
+}
+
+.inputBase--title{
+    font-family: 'Inter-Medium';
+
+    color: var(--blackBrand);
+    margin-bottom: 13px;
+}
+
+.inputBase--field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    width: 100%;
+}
+
+.inputBase--field > input{
+    width: 100%;
+    height: 50px;
+    padding-left: 24px;
+    border: 1px solid var(--tableStroke);
+    border-radius: 5px;
+
+    color: var(--greyDark);
+
+    position: relative;
+}

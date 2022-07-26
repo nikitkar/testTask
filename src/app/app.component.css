@@ -1,0 +1,123 @@
+.header {
+    height: 100vh;
+
+    position: relative;
+}
+
+.formWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin-bottom: 100px;
+}
+
+.formAuth {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    font-family: 'Inter-Bold';
+    font-size: var(--boldSize);
+    line-height: var(--boldSize__lineHeight);
+    color: var(--blackBrand);
+
+    margin-bottom: 8px;
+}
+
+.subTitle {
+    font-size: var(--regularSize);
+    line-height: var(--regularSize__lineHeigth);
+    color: var(--greyDark);
+
+    margin-bottom: 40px;
+}
+
+.formBody {
+    max-width: 410px;
+    width: 100%;
+    height: 100%;
+}
+
+.formControl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+.rememberBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rememberBlock>input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.rememberBlock>input[type="checkbox"]+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.rememberBlock>input[type="checkbox"]+label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--tableStroke);
+    border-radius: 6px;
+    margin-right: 11px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 70%;
+}
+
+.rememberBlock>input[type="checkbox"]:checked+label::before {
+    border-color: var(--blueBrand);
+    background-color: var(--blueBrand);
+    background-image: url("./assets/images/Vector.svg");
+}
+
+/* стили при наведении курсора на checkbox */
+.rememberBlock>input[type="checkbox"]:not(:disabled):not(:checked)+label:hover::before {
+    border-color: var(--blueBrand);
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.rememberBlock>input[type="checkbox"]:not(:disabled):active+label::before {
+    background-color: var(--blueBrand);
+    border-color: var(--blueBrand);
+}
+
+.formControl > a{
+    font-family: 'Inter-Medium';
+    color: var(--blueBrand);
+}
+
+.btn{
+    margin: 0 auto;
+    text-align: center;
+    padding: 16px 32px;
+    border-radius: 12px;
+    background-color: var(--blueBrand);
+    color: #fff;
+
+    margin-top: 33px;
+}
+
+/* #password { -webkit-text-security: var(--textSecurity); } */
